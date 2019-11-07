@@ -21,3 +21,7 @@ $ git commit --amend --reset-author
 
 $ git log
 Informa os commits realizados
+
+$ git remote add Nome Url
+
+$ git push origin master
