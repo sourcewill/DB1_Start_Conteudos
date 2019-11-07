@@ -1,0 +1,23 @@
+$ git config --global user.name "William Rodrigues"
+$ git config --global user.email will@uem.br
+
+
+$ git init 
+Inicia um repositório no diretório atual.
+
+$ git status
+Exibe o estado atual.
+
+$ git add arquivo1 arquivo 2 ...
+Adiciona arquivos ao repositório local (use . para todos)
+
+$ git reset arquivo1 arquivo2 ...
+Remove arquivos do repositório local (use . para todos)
+
+$ git commit -m "Mensagem"
+
+$ git commit --amend --reset-author
+
+
+$ git log
+Informa os commits realizados
