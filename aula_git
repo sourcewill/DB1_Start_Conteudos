@@ -28,11 +28,28 @@ Remove arquivos do repositório local (use . para todos)
 $ git commit -m "Mensagem"
 
 $ git commit --amend --reset-author
+Modifica o autor do ultimo commit realizado
 
 
 $ git log
 Informa os commits realizados
 
 $ git remote add Nome Url
+Configura o repositorio remoto (por padrao usa-se o nome origin)
 
 $ git push origin master
+Envia os commits e alteracoes para beanch especificada (neste caso, master)
+
+$ git branch
+Exibe todas as branchs
+
+$ git branch nova_branch
+Cria uma nova branch
+
+$ git checkout branch
+Muda para uma branch existente
+
+$ git merge master
+Faz merge da master para branch atual
+
+
