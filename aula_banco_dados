@@ -1,0 +1,88 @@
+------------------------------------------------
+
+Aula: Banco de Dados
+
+Professora: Aline (aline.fernandes@db1.com.br)
+
+------------------------------------------------
+
+Comando SQL executados:
+
+
+alter table tbl_cliente 
+	add column cidade integer;
+	
+alter table tbl_cliente
+	alter column cidade set data type varchar(30);
+	
+alter table tbl_cliente
+	drop column if exists cidade
+	
+	
+insert into tbl_cliente(codcliente, nome, datanasc, genero, email)
+values
+(1, 'William', '1997-03-09', 'M', 'email1@gmail.com'),
+(2, 'Maria', '2000-05-11', 'F', 'email2@gmail.com'),
+(3, 'Joao', '1950-05-15', 'M', 'email3@gmail.com'),
+(4, 'Juilia', '2005-08-03', 'F', 'email4@gmail.com'),
+(5, 'Mario', '1981-05-07', 'M', 'email5@gmail.com'),
+(6, 'Cleverson', '1997-03-09', 'M', 'email6@gmail.com'),
+(7, 'Julhiscleide', '2000-05-11', 'F', 'email7@gmail.com'),
+(8, 'Lucas', '1950-05-15', 'M', 'email8@gmail.com'),
+(9, 'Canrobert', '2005-08-03', 'M', 'email9@gmail.com'),
+(10, 'Elaine', '1981-05-07', 'F', 'email10@gmail.com');
+
+insert into tbl_produto(codproduto, nome, descricao, estoque, valor)
+values
+(1, 'Mouse', 'Muito bom', 1, 70.00),
+(2, 'Teclado', 'Muito bom', 1, 120.00),
+(3, 'Monitor', 'Muito bom', 1, 300.00),
+(4, 'Processador', 'Muito bom', 1, 2000.00),
+(5, 'Fone', 'Muito bom', 1, 30.00),
+(6, 'Gabinete', 'Muito bom', 0, 150.00),
+(7, 'Celular', 'Muito bom', 1, 1.99),
+(8, 'Tablet', 'Muito bom', 0, 1500.00),
+(9, 'Carregador', 'Muito bom', 1, 60.00),
+(10, 'Adaptador', 'Muito bom', 1, 25.00);
+
+insert into tbl_pedido(codpedido, nome, fk_codcliente, fk_codproduto, totalpedido, numpedido)
+values
+(1, 'Pedido1', 1, 10, 25.00, 1),
+(2, 'Pedido2', 2, 9, 60.00, 1),
+(3, 'Pedido3', 3, 8, 1500.00, 1),
+(4, 'Pedido4', 4, 7, 1.99, 1),
+(5, 'Pedido5', 5, 6, 150.00, 2),
+(6, 'Pedido6', 6, 5, 30.00, 2),
+(7, 'Pedido7', 7, 4, 2000.00, 2),
+(8, 'Pedido8', 8, 3, 300.00, 3),
+(9, 'Pedido9', 9, 2, 120.00, 3),
+(10, 'Pedido10', 10, 1, 70.00, 3);
+
+
+update tbl_cliente
+set nome = 'William'
+where nome = 'Will'
+
+
+select totalpedido
+from tbl_pedido
+where numpedido = 1
+
+
+select email
+from tbl_cliente
+where email like '%@gmail%' -- se o campo contem esta parte especificada
+
+
+select pro.nome, pro.valor
+from tbl_produto pro, tbl_pedido ped
+where pro.codproduto = ped.fk_codproduto and ped.numpedido = 1
+
+
+select nome, datanasc from tbl_cliente
+order by datanasc asc -- Ordena os resultados > asc = crescente | desc = decrescente
+
+
+
+
+

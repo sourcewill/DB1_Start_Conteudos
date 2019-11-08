@@ -1,3 +1,12 @@
+------------------------------------------------
+
+Aula: Versionamento (GIT)
+
+Professores: Wilde, ...
+
+------------------------------------------------
+
+
 $ git config --global user.name "William Rodrigues"
 $ git config --global user.email will@uem.br
 
