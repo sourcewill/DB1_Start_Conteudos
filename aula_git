@@ -52,4 +52,14 @@ Muda para uma branch existente
 $ git merge master
 Faz merge da master para branch atual
 
+$ git -d nome_branch
+Apaga a branch no repositorio local
+
+$ git -D nome_branch
+Apaga uma branch no repositorio remoto
+
+$ git pull
+Atualiza o repoitorio local com os arquivos contidos na branch atual
+
+
 
