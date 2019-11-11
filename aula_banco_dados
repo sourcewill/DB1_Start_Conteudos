@@ -4,12 +4,39 @@ Aula: Banco de Dados
 
 Data: 05 e 06/11/2019
 
-Professora: Aline (aline.fernandes@db1.com.br)
+Instrutora: Aline Fernandes
+(aline.fernandes@db1.com.br)
 
 ------------------------------------------------
 
+Banco de dados: Postegres (Heroku.com)
+SGBD: Dbeaver
+
+
 Comando SQL executados:
 
+create table tbl_cliente (
+	CodCliente integer constraint pk_CodCliente primary key,
+	Nome varchar(50) not null,
+	DataNasc date,
+	Genero char(1) not null,
+	Email varchar (100)
+);
+
+create table tbl_produto (
+	CodProduto integer constraint pk_CodProduto primary key,
+	Nome varchar(30) not null,
+	Descricao text,
+	Estoque integer not null,
+	Valor numeric(9,2) not null
+);
+
+create table tbl_pedido (
+	CodPedido integer constraint pk_CodPedido primary key,
+	fk_CodProduto integer references tbl_produto (CodProduto) not null,
+	fk_CodCliente integer references tbl_cliente (CodCliente) not null,
+	TotalPedido numeric(10,2) not null
+);
 
 alter table tbl_cliente 
 	add column cidade integer;
