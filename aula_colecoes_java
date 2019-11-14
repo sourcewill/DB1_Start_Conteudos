@@ -1,0 +1,28 @@
+------------------------------------------------
+
+Aula: Coleções Java
+
+Data: 14/11/2019
+
+Instrutor: Robson Alecio
+
+------------------------------------------------
+
+Comparações:
+== 		Igualdade por referência;
+.equals() 	Igualdade por valor;
+
+
+Listas:
+- Tamanho dinaminco;
+- Exceção: IndexOutOfBoundsException (indice invalido);
+- Permite elementos repetidos;
+
+
+Mapas:
+- Composto por chaves e valores;
+
+
+Sets(Conjuntos):
+- Não tem ordem;
+- Não aceita objetos repitidos;
