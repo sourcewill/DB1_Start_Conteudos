@@ -25,4 +25,5 @@ Mapas:
 
 Sets(Conjuntos):
 - Não tem ordem;
-- Não aceita objetos repitidos;
+- Permite for EACH;
+- Não aceita objetos repetidos;
